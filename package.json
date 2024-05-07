@@ -1,9 +1,11 @@
 {
   "name": "@botpresshub/make",
   "scripts": {
-    "start": "pnpm bp serve",
-    "build": "pnpm bp build",
-    "deploy": "pnpm bp deploy",
+    "start": "bp serve",
+    "dev": "nodemon --watch \"./src/*\" --ext \"ts\" --exec \"bp deploy -y\"",
+    "build": "bp build",
+    "deploy": "bp deploy",
+    "postinstall": "bp build",
     "type:check": "tsc --noEmit"
   },
   "keywords": [],
@@ -11,13 +13,14 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@botpress/client": "workspace:*",
-    "@botpress/sdk": "workspace:*",
+    "@botpress/client": "^0.16.0",
+    "@botpress/sdk": "^0.8.6",
     "axios": "^1.6.7"
   },
   "devDependencies": {
-    "@botpress/cli": "workspace:*",
+    "@botpress/cli": "^0.8.9",
     "@types/node": "^18.19.10",
+    "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
     "typescript": "^4.9.5"
   }

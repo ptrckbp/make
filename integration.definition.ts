@@ -1,9 +1,7 @@
 import { z, IntegrationDefinition } from '@botpress/sdk'
 
-const INTEGRATION_NAME = 'make'
-
 export default new IntegrationDefinition({
-  name: INTEGRATION_NAME,
+  name: "decay/make",
   version: '0.3.1',
   title: 'Make.com',
   icon: 'icon.svg',
